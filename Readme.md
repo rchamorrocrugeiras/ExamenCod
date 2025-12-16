@@ -64,3 +64,18 @@ Después de hacer fetch, tienes que traer los cambios a tu rama actual (normalme
 Pregunta
 - Explica los pasos dados para que el cambio realizado en GitHub, llegue a tu rama principal local. Explícalo con capturas de pantalla.
 
+*Respuesta*
+El comando git pull combina dos acciones en una sola:
+- `git fetch`
+- `git merge`
+Por lo tanto, descarga e integra los cambios automáticamente.
+*Pasos realizados*
+1. Se realiza un nuevo cambio desde la web de GitHub.
+2. En el repositorio local, se ejecuta:
+```git pull origin main```
+3. Git descarga los cambios y los fusiona automáticamente con la rama local.
+4. El repositorio local queda actualizado sin pasos adicionales.
+*Conclusión*
+`pull` es más rápido y cómodo que `fetch`, pero ofrece menos control, ya que aplica los cambios directamente.
+
+![alt text](image-4.png)
