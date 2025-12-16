@@ -16,15 +16,16 @@ René Chamorro Crugeiras 1ºDAM
 Pregunta 
 - ¿Qué paso es fundamental cuando clonamos un repositorio ajeno para que podamos subir nuestros propios commits? Explícalo y utiliza capturas de pantalla.
 
-*Respuesta*
+**Respuesta**
+
 El paso fundamental es tener permisos de escritura sobre el repositorio remoto, lo que normalmente se consigue de dos formas:
-- *Ser colaborador del repositorio original*, o
-- *Hacer un fork del repositorio* en nuestra cuenta de GitHub y clonar ese fork.
-Si clonamos directamente un repositorio ajeno *sin permisos*, podremos:
+- **Ser colaborador del repositorio original**, o
+- **Hacer un fork del repositorio** en nuestra cuenta de GitHub y clonar ese fork.
+Si clonamos directamente un repositorio ajeno **sin permisos**, podremos:
 - Ver el código
 - Modificarlo localmente
 - Hacer commits
-Pero *no podremos hacer* `push`, ya que GitHub rechazará la subida por falta de permisos.
+Pero **no podremos hacer** `push`, ya que GitHub rechazará la subida por falta de permisos.
 
 ![alt text](image.png)
 
@@ -36,7 +37,8 @@ Pero *no podremos hacer* `push`, ya que GitHub rechazará la subida por falta de
 Pregunta
 - Explica los pasos para que el código modificado en GitHub, llegue a tu rama principal local. Explícalo con capturas de pantalla.
 
-*Respuesta*
+**Respuesta**
+
 Cuando realizas un cambio directamente en la web de tu repositorio en GitHub (por ejemplo, editando un archivo en línea), esos cambios no se reflejan automáticamente en tu copia local del repositorio. Para traerlos a tu máquina, debes usar fetch y luego integrar los cambios.
 1. Hacer el cambio en GitHub
 - Modifica un archivo desde la interfaz web de GitHub (por ejemplo, cambia un texto en README.md).
@@ -44,11 +46,15 @@ Cuando realizas un cambio directamente en la web de tu repositorio en GitHub (po
 2. Traer los cambios a tu repositorio local usando fetch
 - Abre tu terminal o Git Bash en la carpeta de tu repositorio local.
 - Ejecuta:
+
 ```git fetch origin```
+
 - Esto descargará la información de los cambios realizados en GitHub, pero no los aplica todavía a tu rama local.
-3. Integrar los cambios en tu rama principal
+1. Integrar los cambios en tu rama principal
 Después de hacer fetch, tienes que traer los cambios a tu rama actual (normalmente main o master) usando:
+
 ```git merge origin/main```
+
 - Esto aplica los cambios descargados a tu rama local.
 - Si tu rama principal se llama diferente, reemplaza main por el nombre correcto.
 
@@ -64,18 +70,24 @@ Después de hacer fetch, tienes que traer los cambios a tu rama actual (normalme
 Pregunta
 - Explica los pasos dados para que el cambio realizado en GitHub, llegue a tu rama principal local. Explícalo con capturas de pantalla.
 
-*Respuesta*
+**Respuesta**
+
 El comando git pull combina dos acciones en una sola:
 - `git fetch`
 - `git merge`
+
 Por lo tanto, descarga e integra los cambios automáticamente.
-*Pasos realizados*
+
+**Pasos realizados**
+
 1. Se realiza un nuevo cambio desde la web de GitHub.
 2. En el repositorio local, se ejecuta:
 ```git pull origin main```
-3. Git descarga los cambios y los fusiona automáticamente con la rama local.
-4. El repositorio local queda actualizado sin pasos adicionales.
-*Conclusión*
+1. Git descarga los cambios y los fusiona automáticamente con la rama local.
+2. El repositorio local queda actualizado sin pasos adicionales.
+
+**Conclusión**
+
 `pull` es más rápido y cómodo que `fetch`, pero ofrece menos control, ya que aplica los cambios directamente.
 
 ![alt text](image-4.png)
